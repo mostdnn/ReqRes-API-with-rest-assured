@@ -1,25 +1,28 @@
-Selenium Test Automation Framework
-Overview
-This is a Selenium Test Automation Framework designed to automate web application testing using the Page Object Model (POM) design pattern, TestNG for test management, Allure Report for test reporting, and Data-Driven Testing for parameterized test cases. The framework is compatible with IntelliJ IDEA as the primary IDE.
+# Rest Assured API Testing Framework
 
-Key Features:
+## Overview
+This repository contains a Rest Assured API testing framework designed to test RESTful web services. The framework uses TestNG for test management and Maven for dependency management. Allure Reports is integrated for visual reporting, and the framework supports Data-Driven Testing using external data sources such as Excel and CSV.
+## Key Features:
+Rest Assured for API testing
 TestNG for test execution and reporting
-Page Object Model (POM) for better maintainability
-Data-Driven Testing using Excel or CSV
-Allure Reports for detailed visual reports
-Selenium WebDriver for cross-browser testing
-JUnit for assertions and running tests (optional)
-Configuration files for different environments (optional)
-Test Framework Architecture
+Allure Reports for interactive, visual test reports
+Data-Driven Testing with TestNG DataProvider or external data files (Excel, CSV)
+Maven for dependency management and build automation
+Page Object Model (POM) structure for better maintainability and scalability
 
-Prerequisites
+![Test Framework Architecture](assets/framework-architecture.png)
+
+## Prerequisites
 Before you begin, ensure that you have the following installed:
-
 Java JDK 8+
-Maven (dependency management)
-IntelliJ IDEA (IDE)
-Allure Commandline (for generating reports)
-Project Structure
+Maven (for managing dependencies and building the project)
+IntelliJ IDEA (or your preferred Java IDE)
+Allure Commandline (for generating Allure reports)
+Rest Assured libraries
+TestNG and Allure TestNG Adapter dependencies
+
+## Project Structure
+```bash
 ├── pom.xml               # Maven project file
 ├── src
 │   ├── main
@@ -35,8 +38,6 @@ Project Structure
 ├── target                # Allure and test output
 └── README.md             # Project documentation
 
-
-
 How to Run Tests
 Run from IntelliJ:
 Right-click on the Test class or TestNG.xml file and select Run.
@@ -48,9 +49,11 @@ Allure Reports
 After running the tests, generate the Allure report by using the following command:
 
 bash
-
 allure serve target/allure-results
 
 
 "Conclusion"
-This framework provides a reliable and maintainable approach to web automation testing using Selenium
+
+This Rest Assured API testing framework is a powerful and flexible solution for automating API tests. By leveraging TestNG for test execution and Allure Reports for interactive reporting, it provides a comprehensive and maintainable testing solution for RESTful web services. The framework supports Data-Driven Testing for running tests with multiple data sets and integrates easily with popular tools like Maven and IntelliJ IDEA.
+
+
