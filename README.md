@@ -82,8 +82,7 @@ public void getUserDetailsTest() {
 TestNG
 TestNG is used for test execution and reporting. Each test is defined as a TestNG test method, and you can use annotations like @BeforeMethod, @AfterMethod, @Test, etc., for setting up and cleaning up before/after tests.
 
-Example TestNG setup:
-
+Example TestNG Setup:
 java
 نسخ الكود
 @BeforeClass
@@ -104,7 +103,6 @@ Data-Driven Testing
 The framework supports Data-Driven Testing using TestNG's DataProvider annotation. You can feed different sets of input data to your tests from external files (e.g., CSV, Excel).
 
 Example using TestNG DataProvider:
-
 java
 نسخ الكود
 @DataProvider(name = "userData")
