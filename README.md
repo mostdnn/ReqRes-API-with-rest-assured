@@ -1,7 +1,7 @@
 Rest Assured API Testing Framework
 This repository contains a Rest Assured API testing framework designed to test RESTful web services. The framework uses TestNG for test management and Maven for dependency management. Allure Reports is integrated for visual reporting, and the framework supports Data-Driven Testing using external data sources such as Excel and CSV.
 
-Key Features:
+Key Features
 Rest Assured for API testing
 TestNG for test execution and reporting
 Allure Reports for interactive, visual test reports
@@ -18,34 +18,34 @@ Allure Commandline (for generating Allure reports)
 Rest Assured libraries
 TestNG and Allure TestNG Adapter dependencies
 Project Setup
-Clone the Repository:
+Clone the Repository
 Clone the repository to your local machine using Git:
 
 bash
-نسخ الكود
+
 git clone <repository_url>
 cd <project_directory>
-Import the Project into IntelliJ IDEA:
+Import the Project into IntelliJ IDEA
 Open IntelliJ IDEA.
 Go to File > Open and select the project directory.
 IntelliJ IDEA will automatically import the project if Maven is used.
-Install Dependencies:
+Install Dependencies
 The project uses Maven to manage dependencies. To install the required libraries (like Rest Assured, TestNG, and Allure), run the following command:
 
 bash
-نسخ الكود
+
 mvn clean install
-Configuration Files:
+Configuration Files
 You can configure environment-specific details (e.g., base URL, authentication details) in the src/main/resources/config.properties file.
 
 Example Configuration (config.properties):
 properties
-نسخ الكود
+
 baseUrl = https://api.example.com
 authToken = <your_api_token>
 Project Structure
 bash
-نسخ الكود
+
 ├── pom.xml                    # Maven project file with dependencies
 ├── src
 │   ├── main
@@ -66,7 +66,7 @@ Rest Assured
 Rest Assured is used to perform API tests, handle HTTP requests (GET, POST, PUT, DELETE), and validate responses. Here's an example of a simple GET request test:
 
 java
-نسخ الكود
+
 @Test
 public void getUserDetailsTest() {
     given()
@@ -84,7 +84,7 @@ TestNG is used for test execution and reporting. Each test is defined as a TestN
 
 Example TestNG Setup:
 java
-نسخ الكود
+
 @BeforeClass
 public void setUp() {
     // Setup code (e.g., create authentication tokens, set up base URL)
@@ -104,7 +104,7 @@ The framework supports Data-Driven Testing using TestNG's DataProvider annotatio
 
 Example using TestNG DataProvider:
 java
-نسخ الكود
+
 @DataProvider(name = "userData")
 public Object[][] userData() {
     return new Object[][] {
@@ -127,10 +127,12 @@ Allure Reports
 Allure is integrated to provide detailed and visually appealing test reports. You can generate the Allure report after test execution using the following steps:
 
 After running tests, generate the Allure report with:
+
 bash
-نسخ الكود
+
 allure serve target/allure-results
 This command will open the report in your default browser, where you can view the results, including test status, logs, and screenshots.
+
 Running the Tests
 Run from IntelliJ IDEA:
 Right-click on the Test class or TestNG.xml file.
@@ -139,7 +141,7 @@ Run from Command Line:
 To run the tests via Maven, use the following command:
 
 bash
-نسخ الكود
+
 mvn test
 This will execute all the tests in the project and generate the test reports in the target directory.
 
@@ -147,7 +149,7 @@ Allure Reporting
 After running the tests, you can generate and view the Allure report by executing the following:
 
 bash
-نسخ الكود
+
 allure serve target/allure-results
 This will open the Allure report in the browser, allowing you to explore detailed test results, logs, and screenshots.
 
@@ -155,7 +157,7 @@ Dependencies in pom.xml
 Here are some of the key dependencies included in the pom.xml:
 
 xml
-نسخ الكود
+
 <dependency>
     <groupId>io.rest-assured</groupId>
     <artifactId>rest-assured</artifactId>
@@ -187,3 +189,6 @@ xml
 </dependency>
 Conclusion
 This Rest Assured API testing framework is a powerful and flexible solution for automating API tests. By leveraging TestNG for test execution and Allure Reports for interactive reporting, it provides a comprehensive and maintainable testing solution for RESTful web services. The framework supports Data-Driven Testing for running tests with multiple data sets and integrates easily with popular tools like Maven and IntelliJ IDEA.
+
+
+   
